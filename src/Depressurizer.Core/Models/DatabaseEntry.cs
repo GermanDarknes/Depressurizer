@@ -29,7 +29,7 @@ namespace Depressurizer.Core.Models
 
         private static readonly Regex RegexFlags = new Regex(@"<a[^>]*href=""https?://store\.steampowered\.com/search/\?category2=.*?""><div class=""icon""><img class=""category_icon"" src=""[^>]*""></div><div class=""label"">([^<]*)</div></a>", RegexOptions.Compiled);
 
-        private static readonly Regex RegexGenre = new Regex(@"<div[^>]*class=""details_block"">\s*<b>[^:]*:</b>.*?<br>\s*<b>[^:]*:</b>\s*(<a href=""https?://store\.steampowered\.com/genre/[^>]*>([^<]+)</a>,?\s*)+\s*<br>", RegexOptions.Compiled);
+        private static readonly Regex RegexGenre = new Regex(@"<div[^>]*class=""details_block"">\s*<b>[^:]*:</b>.*?<br>\s*<b>[^:]*:</b>\s*<span[^>]*>\s*(<a href=""https?://store\.steampowered\.com/genre/[^>]*>([^<]+)</a>,?\s*)+\s*</span>\s*<br>", RegexOptions.Compiled);
 
         private static readonly Regex RegexIsDLC = new Regex(@"<img class=""category_icon"" src=""https?://store\.akamai\.steamstatic\.com/public/images/v6/ico/ico_dlc\.png"">", RegexOptions.Compiled);
 
